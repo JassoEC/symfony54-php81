@@ -37,10 +37,9 @@ RUN chmod a+x php-cs-fixer
 RUN mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
 ## Install Symfony binary
-USER appuser
-RUN wget https://get.symfony.com/cli/installer -O - | bash
-USER root
-RUN mv /home/appuser/.symfony/bin/symfony /usr/local/bin/symfony
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash
+RUN apt install symfony-cli
+
 
 RUN mkdir -p /appdata/www
 

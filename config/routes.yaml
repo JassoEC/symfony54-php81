@@ -6,3 +6,8 @@ messenger:
   path: /messenger
   controller: App\Controller\MessengerAction
   methods: [GET]
+
+#health_check:
+#  path: /
+#  controller: App\Controller\HealthCheckController
+#  methods: [GET]
